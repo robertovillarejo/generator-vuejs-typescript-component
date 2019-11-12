@@ -1,13 +1,13 @@
 # <%= name %>
 
 ## Getting started
-To install with npm use `npm i <%=nameSnake%>`  
-To install with yarn use `yarn add <%=nameSnake%>`
+To install with npm use `npm i <%=nameKebab%>`  
+To install with yarn use `yarn add <%=nameKebab%>`
 
 ## Usage
 ```
 <div id="app">
-    <<%=nameSnake%>></<%=nameSnake%>>
+    <<%=nameKebab%>></<%=nameKebab%>>
 </div>
 ```
 

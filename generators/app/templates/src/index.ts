@@ -1,8 +1,8 @@
-import <%=name%>Component from "./<%=nameSnake%>.component.vue";
+import <%=name%>Component from "./<%=nameKebab%>.component.vue";
 
 export default {
   install(Vue: any, options: any) {
-    Vue.component('<%=nameSnake%>', <%=name%>Component);
+    Vue.component('<%=nameKebab%>', <%=name%>Component);
   }
 }
 

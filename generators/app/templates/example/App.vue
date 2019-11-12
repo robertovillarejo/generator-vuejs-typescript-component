@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <<%=nameSnake%>></<%=nameSnake%>>
+    <<%=nameKebab%>></<%=nameKebab%>>
   </div>
 </template>
 
 <script lang="ts">
 import Vue, { VueConstructor } from "vue";
-import <%=name%>Component from "../src/<%=nameSnake%>.component.vue";
+import <%=name%>Component from "../src/<%=nameKebab%>.component.vue";
 
 export default Vue.extend({
-  components: { "<%=nameSnake%>": <%=name%>Component }
+  components: { "<%=nameKebab%>": <%=name%>Component }
 });
 </script>

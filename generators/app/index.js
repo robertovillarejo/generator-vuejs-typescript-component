@@ -6,7 +6,6 @@ const _ = require("lodash");
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
     this.log(
       yosay(`
       Welcome to the mind-blowing ${chalk.red('generator-vuejs-typescript-component')} generator!
@@ -22,9 +21,8 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
       this.props = props;
-      this.props.nameSnake = _.kebabCase(this.props.name);
+      this.props.nameKebab = _.kebabCase(this.props.name);
     });
   }
 
@@ -75,12 +73,12 @@ module.exports = class extends Generator {
     );
     this.fs.copyTpl(
       this.templatePath(`src/ComponentName.component.ts`),
-      this.destinationPath(`src/${this.props.nameSnake}.component.ts`),
+      this.destinationPath(`src/${this.props.nameKebab}.component.ts`),
       this.props
     );
     this.fs.copyTpl(
       this.templatePath("src/ComponentNameComponent.vue"),
-      this.destinationPath(`src/${this.props.nameSnake}.component.vue`),
+      this.destinationPath(`src/${this.props.nameKebab}.component.vue`),
       this.props
     );
     this.fs.copyTpl(
@@ -96,6 +94,6 @@ module.exports = class extends Generator {
   }
 
   install() {
-    //this.installDependencies();
+    this.npmInstall();
   }
 };
