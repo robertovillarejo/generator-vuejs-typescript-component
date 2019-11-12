@@ -1,5 +1,5 @@
 {
-  "name": "generator-vuejs-typescript-component",
+  "name": "@conacyt/generator-vuejs-typescript-component",
   "version": "0.0.1",
   "description": "A Yeoman generator for a new VueJS component with typescript",
   "homepage": "",
@@ -74,6 +74,5 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "CONACYT/generator-vuejs-typescript-component",
   "license": "MIT"
 }
