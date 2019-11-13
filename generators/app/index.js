@@ -8,7 +8,9 @@ module.exports = class extends Generator {
   prompting() {
     this.log(
       yosay(`
-      Welcome to the mind-blowing ${chalk.red('generator-vuejs-typescript-component')} generator!
+      Welcome to the ${chalk.red(
+        "VueJS Typescript Component"
+      )} generator!
       `)
     );
 
@@ -16,14 +18,26 @@ module.exports = class extends Generator {
       {
         type: "input",
         name: "name",
-        message: "The name of your component"
+        message: "The name of your component",
+        default: _.upperFirst(_.camelCase(this.appname)),
+        validate: async function(input) {
+          if (!input) {
+            return false;
+          }
+
+          return true;
+        }
       }
     ];
 
     return this.prompt(prompts).then(props => {
       this.props = props;
-      this.props.nameKebab = _.kebabCase(this.props.name);
     });
+  }
+
+  configuring() {
+    this.props.name = _.upperFirst(_.camelCase(this.props.name));
+    this.props.nameKebab = _.kebabCase(this.props.name);
   }
 
   writing() {

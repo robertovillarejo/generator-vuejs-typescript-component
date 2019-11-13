@@ -9,6 +9,6 @@ import Vue, { VueConstructor } from "vue";
 import <%=name%>Component from "../src/<%=nameKebab%>.component.vue";
 
 export default Vue.extend({
-  components: { "<%=nameKebab%>": <%=name%>Component }
+  components: { <% if(nameKebab.includes('-')) { %>"<%=nameKebab%>"<% } else { %><%=nameKebab%><% } %>: <%=name%>Component }
 });
 </script>

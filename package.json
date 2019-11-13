@@ -1,12 +1,11 @@
 {
   "name": "generator-vuejs-typescript-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Yeoman generator for a new VueJS component with typescript",
-  "homepage": "",
+  "homepage": "https://conacyt-arquitectura.github.io/",
   "author": {
     "name": "Roberto Villarejo Martínez",
-    "email": "roberto.villarejo@cns-ipicyt.mx",
-    "url": ""
+    "email": "roberto.villarejo@cns-ipicyt.mx"
   },
   "files": [
     "generators"
@@ -73,6 +72,9 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest"
+  },
+  "repository": {
+    "url": "https://scm.ccd.conacyt.mx/ciencia-frontera/generator-vuejs-typescript-component"
   },
   "license": "MIT"
 }
