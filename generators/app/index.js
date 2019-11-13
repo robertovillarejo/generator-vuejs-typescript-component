@@ -28,66 +28,66 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copy(
-      this.templatePath("src/shims-tsx.d.ts"),
+      this.templatePath("src/shims-tsx.d.ts.ejs"),
       this.destinationPath("src/shims-tsx.d.ts")
     );
     this.fs.copy(
-      this.templatePath("src/shims-vue.d.ts"),
+      this.templatePath("src/shims-vue.d.ts.ejs"),
       this.destinationPath("src/shims-vue.d.ts")
     );
     this.fs.copy(
-      this.templatePath("src/shims-tsx.d.ts"),
+      this.templatePath("src/shims-tsx.d.ts.ejs"),
       this.destinationPath("example/shims-tsx.d.ts")
     );
     this.fs.copy(
-      this.templatePath("src/shims-vue.d.ts"),
+      this.templatePath("src/shims-vue.d.ts.ejs"),
       this.destinationPath("example/shims-vue.d.ts")
     );
     this.fs.copy(
-      this.templatePath("tsconfig.json"),
+      this.templatePath("tsconfig.json.ejs"),
       this.destinationPath("tsconfig.json")
     );
     this.fs.copy(
-      this.templatePath("babel.config.js"),
+      this.templatePath("babel.config.js.ejs"),
       this.destinationPath("babel.config.js")
     );
     this.fs.copyTpl(
-      this.templatePath("bili.config.ts"),
+      this.templatePath("bili.config.ts.ejs"),
       this.destinationPath("bili.config.ts"),
       this.props
     );
     this.fs.copyTpl(
-      this.templatePath("package.json"),
+      this.templatePath("package.json.ejs"),
       this.destinationPath("package.json"),
       this.props
     );
     this.fs.copyTpl(
-      this.templatePath("README.md"),
+      this.templatePath("README.md.ejs"),
       this.destinationPath("README.md"),
       this.props
     );
     this.fs.copyTpl(
-      this.templatePath("src/index.ts"),
+      this.templatePath("src/index.ts.ejs"),
       this.destinationPath("src/index.ts"),
       this.props
     );
     this.fs.copyTpl(
-      this.templatePath(`src/ComponentName.component.ts`),
+      this.templatePath(`src/ComponentName.component.ts.ejs`),
       this.destinationPath(`src/${this.props.nameKebab}.component.ts`),
       this.props
     );
     this.fs.copyTpl(
-      this.templatePath("src/ComponentNameComponent.vue"),
+      this.templatePath("src/ComponentNameComponent.vue.ejs"),
       this.destinationPath(`src/${this.props.nameKebab}.component.vue`),
       this.props
     );
     this.fs.copyTpl(
-      this.templatePath("example/App.vue"),
+      this.templatePath("example/App.vue.ejs"),
       this.destinationPath("example/App.vue"),
       this.props
     );
     this.fs.copyTpl(
-      this.templatePath("example/main.ts"),
+      this.templatePath("example/main.ts.ejs"),
       this.destinationPath("example/main.ts"),
       this.props
     );

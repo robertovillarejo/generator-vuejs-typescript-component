@@ -1,6 +1,6 @@
 {
-  "name": "@conacyt/generator-vuejs-typescript-component",
-  "version": "0.0.1",
+  "name": "generator-vuejs-typescript-component",
+  "version": "0.0.2",
   "description": "A Yeoman generator for a new VueJS component with typescript",
   "homepage": "",
   "author": {
