@@ -1,5 +1,15 @@
 import Component from "vue-class-component";
 import { Vue } from "vue-property-decorator";
 
+export class Options {
+  constructor() {}
+}
+
+let defaultConfig = new Options();
+export { defaultConfig };
 @Component
-export default class <%=name%>Component extends Vue {}
+export default class <%=name%>Component extends Vue {
+  public get options(): Options {
+    return (<any>this).$<%=nameKebab.toUpperCase()%>_DEFAULT_OPTIONS || defaultConfig;
+  }
+}
