@@ -8,9 +8,7 @@ module.exports = class extends Generator {
   prompting() {
     this.log(
       yosay(`
-      Welcome to the ${chalk.red(
-        "VueJS Typescript Component"
-      )} generator!
+      Welcome to the ${chalk.red("VueJS Typescript Component")} generator!
       `)
     );
 
