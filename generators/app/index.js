@@ -18,7 +18,7 @@ module.exports = class extends Generator {
         name: "name",
         message: "The name of your component",
         default: _.upperFirst(_.camelCase(this.appname)),
-        validate: async function(input) {
+        validate: async function (input) {
           if (!input) {
             return false;
           }
@@ -36,6 +36,7 @@ module.exports = class extends Generator {
   configuring() {
     this.props.name = _.upperFirst(_.camelCase(this.props.name));
     this.props.nameKebab = _.kebabCase(this.props.name);
+    this.props.nameSnake = _.snakeCase(this.props.name);
   }
 
   writing() {

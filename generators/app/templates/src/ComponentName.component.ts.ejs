@@ -10,6 +10,6 @@ export { defaultConfig };
 @Component
 export default class <%=name%>Component extends Vue {
   public get options(): Options {
-    return (<any>this).$<%=nameKebab.toUpperCase()%>_DEFAULT_OPTIONS || defaultConfig;
+    return (<any>this).$<%=nameSnake.toUpperCase()%>_DEFAULT_OPTIONS || defaultConfig;
   }
 }
